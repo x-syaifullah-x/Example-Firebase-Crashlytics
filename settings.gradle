@@ -1,0 +1,3 @@
+rootProject.name = "Example Firebase Crashlytics"
+
+include(":app")

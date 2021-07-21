@@ -1,0 +1,22 @@
+buildscript {
+
+    apply from: "versions.gradle"
+
+    addRepos(repositories)
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$vGradle"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$vKotlin"
+
+        classpath "com.google.gms:google-services:4.3.8"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:2.7.1"
+    }
+}
+
+allprojects {
+    addRepos(repositories)
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
